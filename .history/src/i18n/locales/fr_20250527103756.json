@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "solutions": "Solutions",
+    "products": "Produits",
+    "about": "À propos",
+    "contact": "Contactez-nous"
+  },
+  "hero": {
+    "title": "Développer des solutions intelligentes ",
+    "description": "Nous développons des solutions technologiques qui autonomisent les entreprises et améliorent la vie en Mauritanie. De la santé au logement, nous créons l'infrastructure numérique de demain.",
+    "cta": "Découvrez nos solutions"
+  },
+  "products": {
+    "live": {
+      "title": "Produits Actifs",
+      "subtitle": "Nos solutions déjà en action",
+      "bayti": {
+        "title": "Bayti",
+        "description": "Votre solution complète de location et de gestion immobilière. Trouvez des propriétés, gérez les contrats et connectez-vous avec des prestataires de services."
+      },
+      "medlink": {
+        "title": "Medlink",
+        "description": "Annuaire de santé connectant les patients aux prestataires de soins. Prenez rendez-vous et gérez vos médicaments."
+      },
+      "chaabik": {
+        "title": "Chaabik",
+        "description": "Connectez acheteurs et vendeurs dans votre région. Plateforme moderne et minimaliste pour le commerce local."
+      }
+    },
+    "status": "Actif"
+  },
+  "why": {
+    "title": "Pourquoi Choisir XAHARA ?",
+    "subtitle": "Nous combinons expertise technologique mondiale et compréhension locale approfondie pour créer des solutions adaptées à la Mauritanie.",
+    "items": {
+      "expertise": {
+        "title": "Expertise Locale",
+        "description": "Compréhension approfondie des besoins et défis du marché mauritanien"
+      },
+      "community": {
+        "title": "Focus Communautaire",
+        "description": "Construction de solutions qui renforcent les communautés locales"
+      },
+      "innovation": {
+        "title": "Innovation en Premier",
+        "description": "Technologie de pointe adaptée au contexte local"
+      },
+      "security": {
+        "title": "Fiable et Sécurisé",
+        "description": "Sécurité et fiabilité de niveau entreprise"
+      }
+    }
+  },
+  "mission": {
+    "title": "Notre Mission",
+    "description": "Transformer le paysage numérique mauritanien en créant des solutions technologiques innovantes, accessibles et pertinentes localement qui autonomisent les entreprises et améliorent la vie à travers le pays.",
+    "pillars": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Solutions numériques pionnières adaptées à la Mauritanie"
+      },
+      "empowerment": {
+        "title": "Autonomisation",
+        "description": "Permettre aux entreprises et aux individus de prospérer"
+      },
+      "impact": {
+        "title": "Impact",
+        "description": "Créer un changement positif durable dans notre communauté"
+      }
+    }
+  },
+  "tech": {
+    "title": "Notre Stack Technologique",
+    "subtitle": "Nous utilisons des technologies de pointe pour construire des solutions robustes, évolutives et sécurisées"
+  },
+  "coming": {
+    "title": "Bientôt Disponible",
+    "subtitle": "Notre prochaine génération de solutions",
+    "products": {
+      "khadamati": {
+        "title": "Khadamati",
+        "description": "Réservez des services ménagers et de maintenance"
+      },
+      "maurijobs": {
+        "title": "MauriJobs",
+        "description": "Connectez-vous avec des employeurs et trouvez des opportunités"
+      },
+      "taalimy": {
+        "title": "Taalimy",
+        "description": "Trouvez des tuteurs pour l'apprentissage académique et pratique"
+      }
+    }
+  },
+  "about": {
+    "title": "Construire l'Avenir Numérique de la Mauritanie",
+    "description": "En tant que startup technologique leader en Mauritanie, nous nous engageons à créer des solutions innovantes qui répondent aux besoins locaux réels. Notre plateforme connecte les gens aux services essentiels, crée des opportunités économiques et construit des communautés plus fortes.",
+    "stats": {
+      "products": "Produits",
+      "solutions": "Solutions Actives",
+      "users": "Utilisateurs Servis"
+    }
+  },
+  "cta": {
+    "title": "Prêt à construire l'avenir ensemble ?",
+    "description": "Rejoignez-nous dans la transformation du paysage numérique mauritanien. Que vous soyez une entreprise cherchant à innover ou un talent voulant avoir un impact, nous aimerions vous entendre.",
+    "button": "Contactez-nous"
+  },
+  "footer": {
+    "description": "Développement de solutions technologiques innovantes pour l'avenir de la Mauritanie.",
+    "copyright": "© 2025 SAHARA Technology. Tous droits réservés."
+  }
+}

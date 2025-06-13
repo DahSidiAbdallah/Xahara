@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "solutions": "Solutions",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title": "Building Smart Solutions",
+    "subtitle": "For A New Mauritania.",
+    "description": "Building technology solutions that empower businesses and improve lives across Mauritania. From healthcare to housing, we're creating the digital infrastructure for tomorrow.",
+    "cta": "Explore our solutions"
+  },
+  "products": {
+    "live": {
+      "title": "Live Products",
+      "subtitle": "Our solutions already making an impact",
+      "bayti": {
+        "title": "Bayti",
+        "description": "Your complete home rental and management solution. Find properties, manage contracts, and connect with service providers."
+      },
+      "medlink": {
+        "title": "Medlink",
+        "description": "Healthcare directory connecting patients with healthcare providers. Book appointments and manage medications."
+      },
+      "chaabik": {
+        "title": "Chaabik",
+        "description": "Connect buyers and sellers in your region. Modern, minimalist platform for local commerce."
+      }
+    },
+    "status": "Live"
+  },
+  "coming": {
+    "title": "Coming Soon",
+    "subtitle": "Our next generation of solutions",
+    "products": {
+      "khadamati": {
+        "title": "Khadamati",
+        "description": "Book household services and maintenance"
+      },
+      "maurijobs": {
+        "title": "MauriJobs",
+        "description": "Connect with employers and find opportunities"
+      },
+      "taalimy": {
+        "title": "Taalimy",
+        "description": "Find tutors for academic and skill-based learning"
+      },
+      "dalil360": {
+        "title": "Dalil360",
+        "description": "Local service directory with WhatsApp integration"
+      },
+      "khouya": {
+        "title": "Khouya",
+        "description": "Lost & Found platform for documents and items"
+      }
+    }
+  },
+  "about": {
+    "title": "Building Mauritania's Digital Future",
+    "description": "As Mauritania's leading technology startup, we're committed to creating innovative solutions that address real local needs. Our platform connects people with essential services, creates economic opportunities, and builds stronger communities.",
+    "stats": {
+      "products": "Products",
+      "solutions": "Live Solutions",
+      "users": "Users Served"
+    }
+  },
+  "why": {
+    "title": "Why Choose XAHARA?",
+    "subtitle": "We combine global technology expertise with deep local understanding to create solutions that truly work for Mauritania.",
+    "items": {
+      "expertise": {
+        "title": "Local Expertise",
+        "description": "Deep understanding of Mauritanian market needs and challenges"
+      },
+      "community": {
+        "title": "Community Focus",
+        "description": "Building solutions that strengthen local communities"
+      },
+      "innovation": {
+        "title": "Innovation First",
+        "description": "Cutting-edge technology adapted for local context"
+      },
+      "security": {
+        "title": "Reliable & Secure",
+        "description": "Enterprise-grade security and reliability"
+      }
+    }
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "To transform Mauritania's digital landscape by creating innovative, accessible, and locally-relevant technology solutions that empower businesses and improve lives across the nation.",
+    "pillars": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Pioneering digital solutions tailored for Mauritania"
+      },
+      "empowerment": {
+        "title": "Empowerment",
+        "description": "Enabling businesses and individuals to thrive"
+      },
+      "impact": {
+        "title": "Impact",
+        "description": "Creating lasting positive change in our community"
+      }
+    }
+  },
+  "tech": {
+    "title": "Our Technology Stack",
+    "subtitle": "We use cutting-edge technologies to build robust, scalable, and secure solutions"
+  },
+  "cta": {
+    "title": "Ready to build the future together?",
+    "description": "Join us in transforming Mauritania's digital landscape. Whether you're a business looking to innovate or a talent wanting to make an impact, we'd love to hear from you.",
+    "button": "Get in touch"
+  },
+  "footer": {
+    "description": "Building innovative technology solutions for Mauritania's future.",
+    "copyright": "© 2025 SAHARA Technology. All rights reserved."
+  }
+}

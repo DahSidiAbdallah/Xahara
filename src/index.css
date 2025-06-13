@@ -1,0 +1,57 @@
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/playfair-display/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+.nav-link {
+  @apply relative px-2 py-1 text-gray-600 hover:text-primary transition-colors;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary transform origin-left transition-transform duration-300 scale-x-0;
+}
+
+.nav-link:hover::after {
+  @apply scale-x-100;
+}
+
+.nav-link.active::after {
+  @apply scale-x-100;
+}
+
+[dir="rtl"] .nav-link::after {
+  @apply origin-right;
+}
+
+/* Language Menu Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.language-menu {
+  animation: slideDown 0.2s ease-out;
+}
