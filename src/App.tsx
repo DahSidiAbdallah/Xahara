@@ -13,6 +13,8 @@ import Medlink from './assets/logos/medlink.png';
 import Chaabik from './assets/logos/chaabik.png';
 import xLogo from './assets/logos/X.png';
 import Raytni from './assets/logos/Raytni.png';
+import xaharaLogo from './assets/logos/xahara logo.png';
+import xahara from './assets/logos/xahara.png';
 
 const LANGUAGES = [
   { code: 'en', label: 'English', icon: '🇬🇧' },
@@ -148,7 +150,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-sm' : 'bg-white'}`}>
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-6 py-2"> {/* Changed py-4 to py-2 */}
           <div className="flex items-center">
             <button
               className="flex items-center gap-0.5 text-2xl font-bold text-primary me-12 focus:outline-none"
@@ -165,8 +167,8 @@ function App() {
                 direction: 'ltr' // Force LTR layout for logo
               }}
             >
-              <img src={xLogo} alt="XAHARA Logo" className="h-8 w-8 object-contain" />
-              AHARA
+              <img src={xLogo} alt="X Logo" className="h-12 w-12 object-contain" /> {/* Reduced from h-16 w-16 */}
+              <img src={xahara} alt="XAHARA text" className="h-14 w-14 object-contain" /> {/* Reduced from h-20 w-20 */}
             </button>
 
             <div className="hidden md:flex items-center gap-8">
