@@ -1,19 +1,17 @@
-import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-  Code2, Globe, Laptop, Shield, Smartphone, ArrowRight, CheckCircle2,
-  Database, Cloud, Building2, Cpu, Network, LineChart, Home, Briefcase,
-  GraduationCap, Search, MessageSquare, MapPin, AlertTriangle, Mail, X,
-  Phone, Target, Users, Zap, Server, Code, GitBranch, Database as DbIcon,
-  Cloud as CloudIcon, Lock, Workflow, Languages
+  Code2, Shield, Smartphone, ArrowRight, CheckCircle2,
+  Briefcase, GraduationCap, MessageSquare, Mail, X,
+  Phone, Target, Users, Zap, Server, Code, GitBranch,
+  Database as DbIcon, Cloud as CloudIcon, Lock, Workflow, Languages
 } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 import Bayti from './assets/logos/Bayti.png';
 import Medlink from './assets/logos/medlink.png';
 import Chaabik from './assets/logos/chaabik.png';
 import xLogo from './assets/logos/X.png';
 import Raytni from './assets/logos/Raytni.png';
-import xaharaLogo from './assets/logos/xahara logo.png';
 import xahara from './assets/logos/xahara.png';
 
 const LANGUAGES = [
@@ -141,7 +139,7 @@ function App() {
       category: "DevOps",
       tools: [
         { icon: <GitBranch className="h-8 w-8" />, name: "GitHub" },
-        { icon: <Cloud className="h-8 w-8" />, name: "AWS" },
+        { icon: <CloudIcon className="h-8 w-8" />, name: "AWS" },
         { icon: <Lock className="h-8 w-8" />, name: "Docker" }
       ]
     }
@@ -149,11 +147,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-sm' : 'bg-white'}`}>
-        <div className="container mx-auto px-6 py-2"> {/* Changed py-4 to py-2 */}
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur border-b border-gray-200 shadow-sm' : 'bg-white/70 backdrop-blur border-b border-gray-100'}`}>
+        <div className="container mx-auto px-6 py-1">
           <div className="flex items-center">
             <button
-              className="flex items-center gap-0.5 text-2xl font-bold text-primary me-12 focus:outline-none"
+              className="flex items-center gap-1 text-2xl font-bold text-primary me-8 focus:outline-none"
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 setActiveLink('');
@@ -164,39 +162,36 @@ function App() {
                 border: 'none',
                 padding: 0,
                 cursor: 'pointer',
-                direction: 'ltr' // Force LTR layout for logo
+                direction: 'ltr'
               }}
             >
-              <img src={xLogo} alt="X Logo" className="h-12 w-12 object-contain" /> {/* Reduced from h-16 w-16 */}
-              <img src={xahara} alt="XAHARA text" className="h-14 w-14 object-contain" /> {/* Reduced from h-20 w-20 */}
+              <img src={xLogo} alt="X Logo" className="h-10 w-10 object-contain" />
+              <img src={xahara} alt="XAHARA text" className="h-10 w-20 object-contain" />
             </button>
-
             <div className="hidden md:flex items-center gap-8">
               <a
                 href="#solutions"
-                className={`nav-link ${activeLink === 'solutions' ? 'active' : ''}`}
+                className={`nav-link px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${activeLink === 'solutions' ? 'text-primary font-semibold underline' : 'text-gray-700'}`}
                 onClick={() => setActiveLink('solutions')}
               >
                 {t('nav.solutions')}
               </a>
               <a
                 href="#products"
-                className={`nav-link ${activeLink === 'products' ? 'active' : ''}`}
+                className={`nav-link px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${activeLink === 'products' ? 'text-primary font-semibold underline' : 'text-gray-700'}`}
                 onClick={() => setActiveLink('products')}
               >
                 {t('nav.products')}
               </a>
               <a
                 href="#about"
-                className={`nav-link ${activeLink === 'about' ? 'active' : ''}`}
+                className={`nav-link px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${activeLink === 'about' ? 'text-primary font-semibold underline' : 'text-gray-700'}`}
                 onClick={() => setActiveLink('about')}
               >
                 {t('nav.about')}
               </a>
             </div>
-
             <div className="hidden md:flex items-center gap-6 ml-auto">
-              {/* Improved Language Selector */}
               <div className="relative">
                 <button
                   onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
@@ -230,7 +225,6 @@ function App() {
                   </div>
                 )}
               </div>
-
               <a
                 href="https://wa.me/+22237959569"
                 target="_blank"
@@ -242,10 +236,8 @@ function App() {
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
-
-            {/* Mobile menu button */}
             <button
-              className="md:hidden ms-auto" // Changed ml-auto to ms-auto
+              className="md:hidden ms-auto"
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open menu"
             >
@@ -338,24 +330,21 @@ function App() {
       <section
         className="min-h-[calc(100vh-5rem)] flex items-center justify-center pt-20 relative overflow-hidden"
         style={{
-          backgroundImage: 'url("https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg")',
+          background: 'url("https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        {/* Animated Gradient Overlay */}
-        <div className="absolute inset-0 bg-black/60 z-0" />
-        <div className="absolute inset-0 z-0 animate-gradient-move bg-gradient-to-tr from-primary/30 via-primary-200/20 to-primary-700/20 opacity-80" style={{ backgroundSize: '200% 200%' }} />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-black/40 to-primary-700/40 z-0" />
         <div className="container mx-auto px-6 relative z-10 flex flex-col items-center justify-center min-h-[60vh]">
           <div className="w-full max-w-4xl mx-auto flex flex-col items-center text-center animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white drop-shadow-xl break-words w-full md:w-auto">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight text-white drop-shadow-xl break-words w-full md:w-auto">
               {t('hero.title')}
-
             </h1>
             <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto drop-shadow-lg text-center">
               {t('hero.description')}
             </p>
-            <button className="bg-primary hover:bg-primary-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all flex items-center gap-2 mx-auto group hover:scale-105 focus:ring-4 focus:ring-primary-200 shadow-lg hover:shadow-primary-400/40 focus:outline-none relative overflow-hidden before:absolute before:inset-0 before:bg-primary-400/30 before:blur before:opacity-0 group-hover:before:opacity-100 before:transition-opacity"
+            <button className="bg-primary hover:bg-primary-700 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all flex items-center gap-2 mx-auto group hover:scale-105 focus:ring-4 focus:ring-primary-200 shadow-xl hover:shadow-primary-400/60 focus:outline-none relative overflow-hidden before:absolute before:inset-0 before:bg-primary-400/30 before:blur before:opacity-0 group-hover:before:opacity-100 before:transition-opacity"
               onClick={() => {
                 document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' });
                 setActiveLink('solutions');
@@ -365,23 +354,6 @@ function App() {
             </button>
           </div>
         </div>
-        <style>{`
-          @keyframes gradient-move {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-          }
-          .animate-gradient-move {
-            animation: gradient-move 8s ease-in-out infinite;
-          }
-          @keyframes fade-in {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-          .animate-fade-in {
-            animation: fade-in 1.2s cubic-bezier(0.4,0,0.2,1);
-          }
-        `}</style>
       </section>
 
       <section className="py-20 bg-white">
@@ -394,7 +366,7 @@ function App() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyChooseUs.map((item, index) => (
-              <div key={index} className="text-center p-6 rounded-xl hover:bg-gray-50 transition-all duration-300">
+              <div key={index} className="text-center p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                 <div className="mb-6 flex justify-center">{item.icon}</div>
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
@@ -618,12 +590,10 @@ function App() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-                {/* Logo and branding */}
-                <div className="flex items-center gap-2 text-white mb-6">
-                <img src={xahara} alt="XAHARA Logo" className="h-20 w-20 object-contain" />
-              
-                </div>
-              <p className="text-sm">{t('footer.description')}</p>
+              <div className="flex items-center gap-2 mb-6">
+                <span className="text-3xl font-bold text-white tracking-wide">XAHARA</span>
+              </div>
+              <p className="text-sm text-gray-300">{t('footer.description')}</p>
               <div className="mt-6 space-y-2">
                 <a href="mailto:dahmedvall95@gmail.com" className="flex items-center gap-2 text-gray-400 hover:text-primary-200 hover:underline transition-colors">
                   <Mail className="h-4 w-4" />
@@ -633,15 +603,34 @@ function App() {
                   <Phone className="h-4 w-4" />
                   <span>+222 37959569</span>
                 </a>
+                <div className="flex gap-4 mt-6">
+                  <a href="https://wa.me/+22237959569" target="_blank" rel="noopener noreferrer" className="hover:text-primary-200 transition-colors">
+                    {/* WhatsApp SVG */}
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 32 32"><path d="M16.002 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.6 4.47 1.74 6.41l-1.84 6.73a1.07 1.07 0 0 0 1.31 1.31l6.73-1.84a12.74 12.74 0 0 0 6.41 1.74c7.06 0 12.8-5.74 12.8-12.8s-5.74-12.8-12.8-12.8zm0 23.04c-2.01 0-3.99-.53-5.7-1.53l-.41-.24-4.01 1.1 1.1-4.01-.24-.41a10.57 10.57 0 1 1 9.26 5.09zm5.81-7.84c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1.01 1.25-.18.21-.37.24-.69.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.61-1.89-1.8-2.21-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.54-.71-.55-.18-.01-.4-.01-.62-.01-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66 0 1.57 1.14 3.09 1.3 3.3.16.21 2.24 3.42 5.44 4.66.76.33 1.36.53 1.83.68.77.25 1.47.22 2.02.13.62-.09 1.89-.77 2.16-1.52.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.61-.37z"/></svg>
+                  </a>
+                  <a href="https://www.facebook.com/profile.php?id=61576216050827" target="_blank" rel="noopener noreferrer" className="hover:text-primary-200 transition-colors">
+                    {/* Facebook SVG */}
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.326 24H12.82v-9.294H9.692v-3.622h3.127V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg>
+                  </a>
+                </div>
               </div>
             </div>
             {[{
               title: t('nav.products'),
-              links: ["Raytni", "Chaabik"]
+              links: [
+                { text: "Raytni", href: "#products", scroll: true },
+                { text: "Chaabik", href: "#products", scroll: true }
+              ]
             },
             {
               title: t('nav.solutions'),
-              links: ["MedLink", "Khadamati", "MauriJobs", "Taalimy", "Bayti"]
+              links: [
+                { text: "MedLink", comingSoon: true },
+                { text: "Khadamati", comingSoon: true },
+                { text: "MauriJobs", comingSoon: true },
+                { text: "Taalimy", comingSoon: true },
+                { text: "Bayti", comingSoon: true }
+              ]
             },
             {
               title: t('nav.about'),
@@ -656,8 +645,22 @@ function App() {
                 <ul className="space-y-2">
                   {column.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
-                      {typeof link === 'string' ? (
-                        <span className="hover:text-primary-200 hover:underline transition-colors cursor-pointer">{link}</span>
+                      {link.scroll ? (
+                        <a
+                          href={link.href}
+                          className="hover:text-primary-200 hover:underline transition-colors cursor-pointer"
+                          onClick={e => {
+                            e.preventDefault();
+                            document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                          }}
+                        >
+                          {link.text}
+                        </a>
+                      ) : link.comingSoon ? (
+                        <span className="relative text-gray-400 cursor-not-allowed">
+                          <span className="block text-xs text-primary-400 font-semibold mb-0.5">{t('coming.title')}</span>
+                          <span>{link.text}</span>
+                        </span>
                       ) : (
                         <a
                           href={link.href}
@@ -674,8 +677,10 @@ function App() {
               </div>
             ))}
           </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-sm text-center text-primary-200 bg-gray-900/80 rounded-b-xl shadow-inner">
-            <p>{t('footer.copyright')}</p>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+            <p>
+              &copy; {new Date().getFullYear()} XAHARA. {t('footer.rights')}
+            </p>
           </div>
         </div>
       </footer>
