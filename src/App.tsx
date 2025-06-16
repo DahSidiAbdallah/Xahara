@@ -618,10 +618,11 @@ function App() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center gap-2 text-white mb-6">
-                <X className="h-8 w-8" />
-                <span className="font-bold text-xl">XAHARA</span>
-              </div>
+                {/* Logo and branding */}
+                <div className="flex items-center gap-2 text-white mb-6">
+                <img src={xahara} alt="XAHARA Logo" className="h-20 w-20 object-contain" />
+              
+                </div>
               <p className="text-sm">{t('footer.description')}</p>
               <div className="mt-6 space-y-2">
                 <a href="mailto:dahmedvall95@gmail.com" className="flex items-center gap-2 text-gray-400 hover:text-primary-200 hover:underline transition-colors">
