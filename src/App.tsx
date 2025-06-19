@@ -147,7 +147,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur border-b border-gray-200 shadow-sm' : 'bg-white/70 backdrop-blur border-b border-gray-100'}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-lg' : 'bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm'}`}>
         <div className="container mx-auto px-6 py-1">
           <div className="flex items-center">
             <button
@@ -165,7 +165,7 @@ function App() {
                 direction: 'ltr'
               }}
             >
-              <img src={xLogo} alt="X Logo" className="h-10 w-10 object-contain" />
+              <img src={xLogo} alt="X Logo" className="h-10 w-10 object-contain filter brightness-100 invert" />
               <img src={xahara} alt="XAHARA text" className="h-10 w-20 object-contain" />
             </button>
             <div className="hidden md:flex items-center gap-8">
@@ -328,14 +328,17 @@ function App() {
       )}
 
       <section
-        className="min-h-[calc(100vh-5rem)] flex items-center justify-center pt-20 relative overflow-hidden"
+        className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden"
         style={{
-          background: 'url("https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg")',
+          background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%), url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072&auto=format&fit=crop")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-black/40 to-primary-700/40 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-black/50 to-primary-800/50 z-0" />
+        <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(0deg,transparent,white,transparent)]" />
         <div className="container mx-auto px-6 relative z-10 flex flex-col items-center justify-center min-h-[60vh]">
           <div className="w-full max-w-4xl mx-auto flex flex-col items-center text-center animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight text-white drop-shadow-xl break-words w-full md:w-auto">
@@ -356,8 +359,9 @@ function App() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-gray-200/[0.04] [mask-image:linear-gradient(0deg,transparent,white,transparent)]" />
+        <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">{t('tech.title')}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -419,9 +423,9 @@ function App() {
         `}</style>
       </section>
 
-      <section className="py-20 bg-white relative animate-fade-in">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 pointer-events-none opacity-10 bg-[url('https://www.toptal.com/designers/subtlepatterns/patterns/symphony.png')]" />
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-primary-100/10 [mask-image:linear-gradient(0deg,transparent,white,transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-50/30 via-transparent to-primary-100/20" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">{t('tech.title')}</h2>
@@ -447,9 +451,9 @@ function App() {
         </div>
       </section>
 
-      <section className="py-20 bg-white relative animate-fade-in" id="products">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 pointer-events-none opacity-10 bg-[url('https://www.toptal.com/designers/subtlepatterns/patterns/symphony.png')]" />
+      <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden" id="products">
+        <div className="absolute inset-0 bg-grid-gray-200/50 [mask-image:linear-gradient(0deg,transparent,white,transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-white via-transparent to-primary-50/30" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">{t('products.live.title')}</h2>
@@ -481,9 +485,9 @@ function App() {
         `}</style>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative animate-fade-in" id="solutions">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 pointer-events-none opacity-10 bg-[url('https://www.toptal.com/designers/subtlepatterns/patterns/symphony.png')]" />
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden" id="solutions">
+        <div className="absolute inset-0 bg-grid-primary-100/20 [mask-image:linear-gradient(0deg,transparent,white,transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-transparent to-primary-50/20" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">{t('coming.title')}</h2>
@@ -514,9 +518,9 @@ function App() {
         `}</style>
       </section>
 
-      <section className="py-20 relative animate-fade-in" id="about">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 pointer-events-none opacity-10 bg-[url('https://www.toptal.com/designers/subtlepatterns/patterns/symphony.png')]" />
+      <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden" id="about">
+        <div className="absolute inset-0 bg-grid-gray-200/30 [mask-image:linear-gradient(0deg,transparent,white,transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-transparent to-primary-50/30" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">{t('about.title')}</h2>
@@ -546,9 +550,11 @@ function App() {
         `}</style>
       </section>
 
-      <section className="py-20 relative animate-fade-in" style={{ overflow: 'hidden' }}>
-        {/* Animated background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-700 animate-gradient-move z-0" />
+      <section className="py-28 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-500 to-primary-700 z-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.2)_1px,transparent_1px)] bg-[length:30px_30px] opacity-30"></div>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-600/90 via-primary-500/90 to-primary-700/90 backdrop-blur-sm z-0" />
         <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6 text-white">{t('cta.title')}</h2>
           <p className="text-xl text-primary-100 mb-10 max-w-2xl mx-auto">
@@ -582,11 +588,12 @@ function App() {
         `}</style>
       </section>
 
-      <footer className="relative bg-gray-900 text-gray-400 py-12 mt-0 overflow-hidden">
+      <footer className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-gray-400 py-16 mt-0 overflow-hidden">
         {/* Top Gradient Border */}
-        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-primary-400 to-primary-700 opacity-80" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-primary-400 to-primary-600" />
         {/* Subtle background pattern */}
-        <div className="absolute inset-0 pointer-events-none opacity-10 bg-[url('https://www.toptal.com/designers/subtlepatterns/patterns/symphony.png')]" />
+        <div className="absolute inset-0 bg-grid-gray-800/50 [mask-image:linear-gradient(0deg,transparent,black,transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-900/90 to-gray-800/90 backdrop-blur-sm" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
