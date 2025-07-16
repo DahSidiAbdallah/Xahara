@@ -10,9 +10,9 @@ import { useState, useEffect } from 'react';
 import Bayti from './assets/logos/Bayti.png';
 import Medlink from './assets/logos/medlink.png';
 import Chaabik from './assets/logos/chaabik.png';
-import xLogo from './assets/logos/X.png';
+import Xahara from './assets/logos/xahara logo.png';
 import Raytni from './assets/logos/Raytni.png';
-import xahara from './assets/logos/xahara.png';
+
 
 const LANGUAGES = [
   { code: 'en', label: 'English', icon: '🇬🇧' },
@@ -146,12 +146,12 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-lg' : 'bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm'}`}>
+    <div className="min-h-screen bg-accent-50">
+      <nav className="fixed w-full z-50 transition-all duration-500 border-b border-primary-100 shadow-sm" style={{ backgroundColor: '#fcfbfb' }}>
         <div className="container mx-auto px-6 py-1">
           <div className="flex items-center">
             <button
-              className="flex items-center gap-1 text-2xl font-bold text-primary me-8 focus:outline-none"
+              className="flex items-center gap-1 text-2xl font-bold text-primary-600 me-8 focus:outline-none"
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 setActiveLink('');
@@ -165,27 +165,27 @@ function App() {
                 direction: 'ltr'
               }}
             >
-              <img src={xLogo} alt="X Logo" className="h-10 w-10 object-contain filter brightness-100 invert" />
-              <img src={xahara} alt="XAHARA text" className="h-10 w-20 object-contain" />
+              <img src={Xahara} alt="X Logo" className="h-10 w-16 object-contain" />
+          
             </button>
             <div className="hidden md:flex items-center gap-8">
               <a
                 href="#solutions"
-                className={`nav-link px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${activeLink === 'solutions' ? 'text-primary font-semibold underline' : 'text-gray-700'}`}
+                className={`nav-link px-2 py-1 rounded transition-colors duration-200 hover:text-primary-600 ${activeLink === 'solutions' ? 'text-primary-600 font-semibold underline' : 'text-primary-700'}`}
                 onClick={() => setActiveLink('solutions')}
               >
                 {t('nav.solutions')}
               </a>
               <a
                 href="#products"
-                className={`nav-link px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${activeLink === 'products' ? 'text-primary font-semibold underline' : 'text-gray-700'}`}
+                className={`nav-link px-2 py-1 rounded transition-colors duration-200 hover:text-primary-600 ${activeLink === 'products' ? 'text-primary-600 font-semibold underline' : 'text-primary-700'}`}
                 onClick={() => setActiveLink('products')}
               >
                 {t('nav.products')}
               </a>
               <a
                 href="#about"
-                className={`nav-link px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${activeLink === 'about' ? 'text-primary font-semibold underline' : 'text-gray-700'}`}
+                className={`nav-link px-2 py-1 rounded transition-colors duration-200 hover:text-primary-600 ${activeLink === 'about' ? 'text-primary-600 font-semibold underline' : 'text-primary-700'}`}
                 onClick={() => setActiveLink('about')}
               >
                 {t('nav.about')}
@@ -229,7 +229,7 @@ function App() {
                 href="https://wa.me/+22237959569"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-primary hover:bg-primary-800 active:bg-primary-900 text-white px-6 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-2 hover:scale-105 active:scale-95"
+                className="group bg-primary-600 hover:bg-primary-700 active:bg-primary-800 text-white px-6 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-2 hover:scale-105 active:scale-95"
               >
                 <MessageSquare className="h-4 w-4" />
                 {t('nav.contact')}
@@ -258,7 +258,7 @@ function App() {
             onClick={() => setMobileMenuOpen(false)}
           />
           {/* Top-right Popup Menu */}
-          <div className="fixed top-6 right-6 z-50 w-80 max-w-[95vw] rounded-2xl bg-white shadow-2xl p-6 flex flex-col gap-6 animate-slide-in-menu">
+          <div className="fixed top-6 right-6 z-50 w-80 max-w-[95vw] rounded-2xl bg-accent-50 shadow-2xl p-6 flex flex-col gap-6 animate-slide-in-menu">
             <button
               className="absolute top-4 right-4"
               onClick={() => setMobileMenuOpen(false)}
@@ -269,21 +269,21 @@ function App() {
             <nav className="flex flex-col gap-4 mt-2">
               <a
                 href="#solutions"
-                className="text-lg font-medium text-gray-800 hover:text-primary transition"
+                className="text-lg font-medium text-primary-700 hover:text-primary-600 transition"
                 onClick={() => { setActiveLink('solutions'); setMobileMenuOpen(false); }}
               >
                 {t('nav.solutions')}
               </a>
               <a
                 href="#products"
-                className="text-lg font-medium text-gray-800 hover:text-primary transition"
+                className="text-lg font-medium text-primary-700 hover:text-primary-600 transition"
                 onClick={() => { setActiveLink('products'); setMobileMenuOpen(false); }}
               >
                 {t('nav.products')}
               </a>
               <a
                 href="#about"
-                className="text-lg font-medium text-gray-800 hover:text-primary transition"
+                className="text-lg font-medium text-primary-700 hover:text-primary-600 transition"
                 onClick={() => { setActiveLink('about'); setMobileMenuOpen(false); }}
               >
                 {t('nav.about')}
@@ -296,8 +296,8 @@ function App() {
                   key={lng.code}
                   onClick={() => { changeLanguage(lng.code); setMobileMenuOpen(false); }}
                   className={`flex items-center gap-1 px-3 py-1 rounded-full border transition
-                    ${i18n.language === lng.code ? 'bg-primary text-white border-primary' : 'bg-gray-100 text-gray-700 border-gray-200'}
-                    hover:bg-primary hover:text-white hover:border-primary`}
+                    ${i18n.language === lng.code ? 'bg-primary-600 text-white border-primary-600' : 'bg-accent-100 text-primary-700 border-primary-200'}
+                    hover:bg-primary-600 hover:text-white hover:border-primary-600`}
                   style={{ fontFamily: 'inherit', fontSize: '1rem' }}
                 >
                   <span>{lng.icon}</span>
@@ -309,7 +309,7 @@ function App() {
               href="https://wa.me/+22237959569"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full mt-2 bg-primary hover:bg-primary-800 text-white text-base font-semibold rounded-xl py-3 transition-all flex items-center justify-center gap-2 shadow"
+              className="w-full mt-2 bg-primary-600 hover:bg-primary-700 text-white text-base font-semibold rounded-xl py-3 transition-all flex items-center justify-center gap-2 shadow"
             >
               <MessageSquare className="h-5 w-5" />
               {t('nav.contact')}
